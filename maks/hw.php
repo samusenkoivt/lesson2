@@ -47,14 +47,24 @@ $result = 'не было установленно';
  */
 
 
+
 if ($dateType == 'int') {
     $result = (int) $userString;
-}
+}elseif ($dateType == 'bool') {
+	$result = (bool) $userString;
+}elseif($dateType == 'float') {
+    $result = (float) $userString;
+}elseif ($dateType == 'string') {
+	$result = (string) $userString;
+} 
 
 
-
+if ($result == 'не было установленно') {
+	echo 'Вы не указали желаемый тип данных'.PHP_EOL;
+}else{
 echo 'После преобразования ' . $userString . ' к типу ' . $dateType . ' переменная получила значение '
     . var_export($result, true) . PHP_EOL;
+}
 
 
 
