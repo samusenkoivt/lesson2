@@ -50,8 +50,16 @@ $result = 'не было установленно';
 if ($dateType == 'int') {
     $result = (int) $userString;
 }
+if ($dateType =='string'){
+	$result = (string) $userString;
 
-
+}
+if ($dateType =='bool'){
+	$result = (bool) $userString;
+}
+if ($dateType =='float'){
+	$result = (float) $userString;
+}
 
 echo 'После преобразования ' . $userString . ' к типу ' . $dateType . ' переменная получила значение '
     . var_export($result, true) . PHP_EOL;
