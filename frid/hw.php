@@ -64,6 +64,10 @@ if ($dateType =='float'){
 echo 'После преобразования ' . $userString . ' к типу ' . $dateType . ' переменная получила значение '
     . var_export($result, true) . PHP_EOL;
 
+ if ($dateType !=="int" && $dateType !=="bool"&&$dateType !=="float"&&$dateType !=="string")
+ 	echo 'Желаемый тип данных указан неверно'; 
+    
+
 
 
 
