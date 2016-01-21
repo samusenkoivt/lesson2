@@ -49,20 +49,27 @@ $result = 'не было установленно';
 
 if ($dateType == 'int') {
     $result = (int) $userString;
+    echo 'После преобразования ' . $userString . ' к типу ' . $dateType . ' переменная получила значение '
+    . var_export($result, true) . PHP_EOL;
 }
 if ($dateType =='string'){
 	$result = (string) $userString;
+	echo 'После преобразования ' . $userString . ' к типу ' . $dateType . ' переменная получила значение '
+    . var_export($result, true) . PHP_EOL;
 
 }
 if ($dateType =='bool'){
 	$result = (bool) $userString;
+	echo 'После преобразования ' . $userString . ' к типу ' . $dateType . ' переменная получила значение '
+    . var_export($result, true) . PHP_EOL;
 }
 if ($dateType =='float'){
 	$result = (float) $userString;
+	echo 'После преобразования ' . $userString . ' к типу ' . $dateType . ' переменная получила значение '
+    . var_export($result, true) . PHP_EOL;
 }
 
-echo 'После преобразования ' . $userString . ' к типу ' . $dateType . ' переменная получила значение '
-    . var_export($result, true) . PHP_EOL;
+
 
  if ($dateType !=="int" && $dateType !=="bool"&&$dateType !=="float"&&$dateType !=="string")
  	echo 'Желаемый тип данных указан неверно'; 
